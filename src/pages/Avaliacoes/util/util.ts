@@ -1,9 +1,9 @@
 
 import estrelas from "../../../img/estrelas.png";
 import cliente1 from "../../../img/cliente1.png";
-import cliente2 from "../../../img/Cliente2.png";
-import cliente3 from "../../../img/Cliente3.png";
-import cliente4 from "../../../img/Cliente4.png";
+import cliente2 from "../../../img/cliente2.png";
+import cliente3 from "../../../img/cliente3.png";
+import cliente4 from "../../../img/cliente4.png";
 import cliente5 from "../../../img/cliente5.png";
 import cliente8 from "../../../img/cliente8.png";
 
