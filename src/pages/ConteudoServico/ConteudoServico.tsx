@@ -8,13 +8,13 @@ export const ConteudoServico: React.FC = () => {
         <Box component="section" sx={{ bgcolor: 'background.default' }} id="servicos"  >
             <Container maxWidth="lg">
                 <Box sx={{ textAlign: 'center', mb: 10 }}>
-                    <Typography  sx={{ color: 'secondary.main', fontWeight: 900,  letterSpacing: '0.1rem' }}>
+                    <Typography data-aos="fade-right" sx={{ color: 'secondary.main', fontWeight: 900, letterSpacing: '0.1rem' }}>
                         {CONTEUDO_SERVICOS.nossoH}
                     </Typography>
-                    <Typography variant="h3" sx={{ fontWeight: 700, mb: 2, color: 'text.primary', fontSize: { xs: '2rem', md: '2.5rem' } }}  >
+                    <Typography data-aos="fade-left" variant="h3" sx={{ fontWeight: 700, mb: 2, color: 'text.primary', fontSize: { xs: '2rem', md: '2.5rem' } }}  >
                         {CONTEUDO_SERVICOS.title}
                     </Typography>
-                    <Typography variant="body1" sx={{ color: 'text.secondary', fontSize: '1rem' }}>
+                    <Typography data-aos="fade-right" variant="body1" sx={{ color: 'text.secondary', fontSize: '1rem' }}>
                         {CONTEUDO_SERVICOS.description}
                     </Typography>
                 </Box>
@@ -28,13 +28,15 @@ export const ConteudoServico: React.FC = () => {
                                     src={servico.icon}
                                     alt={servico.title}
                                     sx={{ width: 80, height: 80, mb: 3, objectFit: 'contain', }}
+                                    data-aos="zoom-in"
+                                    data-aos-delay={index * 200}
                                 />
 
-                                <Typography variant="h6" sx={{ fontWeight: 700, mb: 1.5, color: 'text.primary',  }} >
+                                <Typography data-aos="zoom-in" variant="h6" sx={{ fontWeight: 700, mb: 1.5, color: 'text.primary', }} >
                                     {servico.title}
                                 </Typography>
 
-                                <Typography variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.7, fontSize: '0.8rem',textAlign: "center" }}   >
+                                <Typography data-aos="zoom-in" variant="body2" sx={{ color: 'text.secondary', lineHeight: 1.7, fontSize: '0.8rem', textAlign: "center" }}   >
                                     {servico.description}
                                 </Typography>
                             </Box>

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Tooltip, Typography } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
@@ -15,6 +15,7 @@ export default function Avaliacoes() {
             <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", gap: 4, }}>
                 <Box sx={{ width: { xs: "100%", md: "26%" }, display: "flex", flexDirection: "column", alignItems: "center", }}  >
                     <Box
+                        data-aos="fade-right"
                         component="img"
                         src={Cara_avialicao}
                         alt="Cliente"
@@ -22,18 +23,18 @@ export default function Avaliacoes() {
                     />
                 </Box>
                 <Box sx={{ width: { xs: "100%", md: "70%" } }}>
-                    <Typography sx={{ color: "secondary.main", fontWeight: "bold" }}  >
+                    <Typography data-aos="zoom-in" sx={{ color: "secondary.main", fontWeight: "bold" }}  >
                         NÓS SOMOS SINÔNIMO DE QUALIDADE!
                     </Typography>
 
-                    <Typography variant="h4" sx={{ mb: 3, }}>
+                    <Typography data-aos="zoom-in" variant="h4" sx={{ mb: 3, }}>
                         Veja o que nosso clientes dizem nas avaliações do Google!
                     </Typography>
                     <Box >
                         <Swiper
                             modules={[Navigation, Pagination, Autoplay]}
                             spaceBetween={1}
-                            autoplay={{ delay: 1500, disableOnInteraction: false }}
+                            autoplay={{ delay: 1500, disableOnInteraction: false, pauseOnMouseEnter: true }}
                             slidesPerView={3}
                             breakpoints={{
                                 0: { slidesPerView: 1 },
@@ -54,7 +55,11 @@ export default function Avaliacoes() {
                                         <Typography sx={nome_avaliacao}>{cliente.nome}</Typography>
                                         <Typography sx={mes_avaliacao}>{cliente.tempo}</Typography>
                                         <Box component="img" src={cliente.estrelas} alt={cliente.estrelas} sx={estrelas_avaliacao} />
-                                        <Typography sx={message_avaliacao}>{cliente.mensagem}</Typography>
+                                        <Tooltip title={cliente.mensagem} arrow placement="bottom" >
+                                            <Typography sx={message_avaliacao}>
+                                                {cliente.mensagem}
+                                            </Typography>
+                                        </Tooltip>
                                     </Box>
                                 </SwiperSlide>
                             ))}

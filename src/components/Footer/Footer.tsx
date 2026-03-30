@@ -52,10 +52,12 @@ export const Footer: React.FC = () => {
 
             <Box sx={{ bgcolor: '#1D4B89', py: 2, px: { xs: 2, md: 10 }, display: 'flex', lexDirection: { xs: 'column', md: 'row' }, justifyContent: 'center', alignItems: 'center', gap: 4 }}>
                 <Stack direction="row" spacing={4}>
-                    {NAV_LINKS.map((item) => (
+                    {NAV_LINKS.map((item, index) => (
                         <Link
                             key={item.label}
                             href={item.href}
+                            data-aos="zoom-in"
+                            data-aos-delay={index * 200}
                             sx={{
                                 color: 'white',
                                 textDecoration: 'none',
@@ -75,6 +77,8 @@ export const Footer: React.FC = () => {
                     variant="contained"
                     href="https://wa.me/5511974292939?text=Ol%C3%A1!%20Encontrei%20a%20Wise%20Inform%C3%A1tica%20pelo%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20servi%C3%A7os%20e%20valores.%20Obrigado!"
                     target="_blank"
+                    data-aos="zoom-in"
+                    data-aos-delay={NAV_LINKS.length * 200}
                     rel="noopener noreferrer"
                     endIcon={<ArrowForwardIcon sx={{ color: '#019ED5' }} />}
                     sx={{
@@ -90,8 +94,6 @@ export const Footer: React.FC = () => {
                     Fale conosco
                 </Button>
             </Box>
-
-            {/* COPYRIGHT FINAL */}
             <Box sx={{ py: 3, textAlign: 'center' }}>
                 <Typography sx={{ color: '#252525', mb: 1 }}>
                     Copyright © <b style={{ color: "#181818" }}>WiseNetwork</b>. (Lei 9610 de 18/03/2026)

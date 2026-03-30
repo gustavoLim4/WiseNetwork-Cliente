@@ -4,7 +4,6 @@ import { Banner } from "./pages/Banner/Banner"
 import { Sobre } from "./pages/Sobre/Sobre"
 import { ConteudoServico } from "./pages/ConteudoServico/ConteudoServico"
 import { Catalogo } from "./pages/Catalogo/Catalogo"
-import { Emergencia } from "./pages/Emergencia/Emergencia"
 import { Autorizadas } from "./pages/Atualizados/Autorizadas"
 import Avaliacoes from "./pages/Avaliacoes/Avalicoes"
 import { Contato } from "./pages/Contato/Contato"
@@ -21,7 +20,6 @@ export const App = () => {
         <ConteudoServico />
         <Catalogo />
         <Autorizadas />
-        <Emergencia />
         <Avaliacoes />
         <Contato />
         <Footer />

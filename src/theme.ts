@@ -43,6 +43,7 @@ const theme = createTheme({
       styleOverrides: {
         html: {
           scrollBehavior: 'smooth',
+          overflowX: 'hidden',
         },
       },
     },

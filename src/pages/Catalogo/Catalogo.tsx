@@ -13,7 +13,7 @@ export const Catalogo: React.FC = () => {
     return (
         <Container maxWidth="lg" sx={{ my: 10 }}>
             <Box sx={{ textAlign: 'center', mb: 4 }}>
-                <Box sx={{ display: "flex", gap: 1.5, justifyContent: "center", flexWrap: "wrap", mb: 1 }}>
+                <Box data-aos="fade-right" sx={{ display: "flex", gap: 1.5, justifyContent: "center", flexWrap: "wrap", mb: 1 }}>
                     <Typography variant="h3" sx={{ fontWeight: 700, fontSize: { xs: 32, md: 40 } }}>
                         {CONTEUDO_CATALOGO.tituloPrincipal}
                     </Typography>
@@ -21,7 +21,7 @@ export const Catalogo: React.FC = () => {
                         {CONTEUDO_CATALOGO.tituloDestaque}
                     </Typography>
                 </Box>
-                <Typography sx={{ color: 'text.secondary', px: 2 }}>
+                <Typography data-aos="fade-left" sx={{ color: 'text.secondary', px: 2 }}>
                     {CONTEUDO_CATALOGO.descricao}
                 </Typography>
             </Box>
@@ -39,7 +39,7 @@ export const Catalogo: React.FC = () => {
                     style={{ padding: '60px 20px' }}
                 >
                     {CONTEUDO_CATALOGO.categorias.map((cat, index) => (
-                        <SwiperSlide key={index}>
+                        <SwiperSlide key={index} >
                             <Box
                                 sx={{
                                     position: 'relative',
@@ -93,7 +93,7 @@ export const Catalogo: React.FC = () => {
                 </Swiper>
             </Box>
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', }}>
+            <Box data-aos="zoom-in" sx={{ display: 'flex', justifyContent: 'center', }}>
                 <Button component="a" href="https://wa.me/5511974292939?text=Ol%C3%A1!%20Encontrei%20a%20Wise%20Inform%C3%A1tica%20pelo%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20servi%C3%A7os%20e%20valores.%20Obrigado!" target="_blank" rel="noopener noreferrer" endIcon={<WhatsAppIcon />} variant="contained" color="secondary" sx={{ px: 6, py: 1.5, fontWeight: 700, fontSize: '1rem' }} >
                     {CONTEUDO_CATALOGO.textoBotao}
                 </Button>

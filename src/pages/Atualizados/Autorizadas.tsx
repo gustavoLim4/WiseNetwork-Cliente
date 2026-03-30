@@ -7,11 +7,11 @@ const Marquee = (ReactFastMarquee as any).default || ReactFastMarquee;
 export const Autorizadas: React.FC = () => {
     return (
         <Container maxWidth={false} sx={{ py: 6, overflow: 'hidden' }} id='autorizadas' >
-            <Typography variant="h3" sx={{ fontWeight: 700, mb: 1, color: 'text.primary', textAlign: "center", fontSize: { xs: '2rem', md: '2.5rem' } }} >
+            <Typography data-aos="fade-left" variant="h3" sx={{ fontWeight: 700, mb: 1, color: 'text.primary', textAlign: "center", fontSize: { xs: '2rem', md: '2.5rem' } }} >
                 Marcas Autorizadas
             </Typography>
 
-            <Typography variant="body1" sx={{ color: 'text.secondary', fontSize: '1rem', textAlign: 'center', mb: 4 }} >
+            <Typography data-aos="fade-right" variant="body1" sx={{ color: 'text.secondary', fontSize: '1rem', textAlign: 'center', mb: 4 }} >
                 Trabalhamos com as melhores marcas do mercado, garantindo qualidade e confiança nos nossos serviços.
             </Typography>
 
