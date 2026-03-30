@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, TextField, Button, Typography, Stack, Container, CircularProgress} from '@mui/material';
 import FundoContato from "../../img/FundoContato.png";
 import { getMainGradient } from '../../util/Grandient';
+import { maskNome, maskTelefone } from '../../util/masks';
 
 export const Contato: React.FC = () => {
   const [nome, setNome] = useState('');
@@ -77,7 +78,7 @@ export const Contato: React.FC = () => {
                 fullWidth
                 placeholder="Digite seu nome"
                 value={nome}
-                onChange={(e) => setNome(e.target.value)}
+                 onChange={(e) => setNome(maskNome(e.target.value))}
               />
 
               <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
@@ -91,7 +92,7 @@ export const Contato: React.FC = () => {
                   fullWidth
                   placeholder="(00) 00000-0000"
                   value={telefone}
-                  onChange={(e) => setTelefone(e.target.value)}
+                  onChange={(e) => setTelefone(maskTelefone(e.target.value))}
                 />
               </Stack>
 
