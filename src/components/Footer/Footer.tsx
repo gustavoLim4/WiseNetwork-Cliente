@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
                     <Stack direction="row" spacing={3}>
                         <IconButton component="a" href="https://wa.me/5511974292939?text=Ol%C3%A1!%20Encontrei%20a%20Wise%20Inform%C3%A1tica%20pelo%20site%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es%20sobre%20servi%C3%A7os%20e%20valores.%20Obrigado!" target="_blank" rel="noopener noreferrer" sx={{ background: getMainGradient(), color: 'white', '&:hover': { opacity: 0.9 } }}><WhatsAppIcon sx={{ fontSize: 40 }} /></IconButton>
                         <IconButton component="a" href="https://www.instagram.com/wiseinformatica/" target="_blank" rel="noopener noreferrer" sx={{ background: getMainGradient(), color: 'white', '&:hover': { opacity: 0.9 } }}><InstagramIcon sx={{ fontSize: 40 }} /></IconButton>
-                        <IconButton component="a" href="" target="_blank" rel="noopener noreferrer" sx={{ background: getMainGradient(), color: 'white', '&:hover': { opacity: 0.9 } }}><FacebookIcon sx={{ fontSize: 40 }} /></IconButton>
+                        <IconButton component="a" href="https://www.facebook.com/Wiseinformatica" target="_blank" rel="noopener noreferrer" sx={{ background: getMainGradient(), color: 'white', '&:hover': { opacity: 0.9 } }}><FacebookIcon sx={{ fontSize: 40 }} /></IconButton>
                     </Stack>
                 </Box>
 
